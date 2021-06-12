@@ -8,12 +8,12 @@ OOP_Hw3::FunctionDivide::FunctionDivide(SharedPtr<Function> up, SharedPtr<Functi
 
 SharedPtr<OOP_Hw3::Function> OOP_Hw3::FunctionDivide::DeriveBy(const std::string &variable) const
 {
-    SharedPtr<Function> upDerive = this->upFunction->DeriveBy(variable);//נגזרת של המונה
-    SharedPtr<Function> downDerive = this->downFunction->DeriveBy(variable);//נגזרת של המחנה
-    SharedPtr<Function> newUpLeftDerive = new FunctionMulti(upDerive,this->downFunction);//הנגזרת של החלק השמאלי של המונה
-    SharedPtr<Function> newUpRigthDerive = new FunctionMulti(downDerive,this->upFunction);//הנגזרת של החלק הימני של המונה
-    SharedPtr<Function> newUp = new FunctionDiffrence(newUpLeftDerive,newUpRigthDerive);//פונקציית הפרש חדשה למונה שהיא הנגגזרת שלו
-    SharedPtr<Function> newDown = new FunctionMulti(this->downFunction,this->downFunction);//המחנה בריבוע
+    SharedPtr<Function> upDerive = this->upFunction->DeriveBy(variable);
+    SharedPtr<Function> downDerive = this->downFunction->DeriveBy(variable);
+    SharedPtr<Function> newUpLeftDerive = new FunctionMulti(upDerive,this->downFunction);
+    SharedPtr<Function> newUpRigthDerive = new FunctionMulti(downDerive,this->upFunction);
+    SharedPtr<Function> newUp = new FunctionDiffrence(newUpLeftDerive,newUpRigthDerive);
+    SharedPtr<Function> newDown = new FunctionMulti(this->downFunction,this->downFunction);
     return new FunctionDivide(newUp,newDown);
 }
 
