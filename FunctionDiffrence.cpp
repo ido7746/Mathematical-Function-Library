@@ -15,9 +15,9 @@ double OOP_Hw3::FunctionDiffrence::Evaluate(const std::map<std::string, double> 
 
 SharedPtr<OOP_Hw3::Function> OOP_Hw3::FunctionDiffrence::DeriveBy(const std::string &variable) const
 {
-    SharedPtr<Function> rigthDerive = this->rigthFunction->DeriveBy(variable);//גוזר את החלק הימני
-    SharedPtr<Function> leftDerive = this->leftFunction->DeriveBy(variable);//גוזר את החלק השמאלי
-    return new FunctionDiffrence(leftDerive,rigthDerive);//יוצר פונקציית הפרש חדשה של הנגזרות
+    SharedPtr<Function> rigthDerive = this->rigthFunction->DeriveBy(variable);
+    SharedPtr<Function> leftDerive = this->leftFunction->DeriveBy(variable);
+    return new FunctionDiffrence(leftDerive,rigthDerive);
 }
 
 
