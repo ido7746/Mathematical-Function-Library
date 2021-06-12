@@ -33,12 +33,12 @@ namespace OOP_Hw3
 	    return ptrFunction;
 	}
 
-	SharedPtr<Function> var(const std::string& variableName){//יוצר פונקציית זהות
+	SharedPtr<Function> var(const std::string& variableName){
 	    SharedPtr<Function> ptr = new FunctionId(variableName);
 	    return ptr;
 	}
 
-	SharedPtr<Function> cnst(double num){//יוצר פונצייה קבועה
+	SharedPtr<Function> cnst(double num){
         SharedPtr<Function> ptr = new FunctionPermanent(num);
         return ptr;
 	}
