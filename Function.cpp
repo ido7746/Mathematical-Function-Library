@@ -1,6 +1,6 @@
 #include "Function.h"
 
-void OOP_Hw3::Function::MargeVatiable(std::list<std::string> listR, std::list<std::string> listL)
+void Function::MargeVatiable(std::list<std::string> listR, std::list<std::string> listL)
 {
     this->variables.merge(listR);
     this->variables.merge(listL);
@@ -10,13 +10,13 @@ void OOP_Hw3::Function::MargeVatiable(std::list<std::string> listR, std::list<st
         this->variables.remove("NoN");
 }
 
-std::map<std::string, std::map<std::string, SharedPtr<OOP_Hw3::Function> > > OOP_Hw3::Function::Hessian() const
+std::map<std::string, std::map<std::string, SharedPtr<Function> > > Function::Hessian() const
 {
-    std::map<std::string, std::map<std::string, SharedPtr<OOP_Hw3::Function> > > hessianMatrix;
+    std::map<std::string, std::map<std::string, SharedPtr<Function> > > hessianMatrix;
     for(std::list<std::string>::const_iterator i = this->variables.begin(); i != this->variables.end(); ++i){
-        SharedPtr<OOP_Hw3::Function> firsDeriveByi =  this->DeriveBy(*i);
+        SharedPtr<Function> firsDeriveByi =  this->DeriveBy(*i);
         for(std::list<std::string>::const_iterator j = this->variables.begin(); j != this->variables.end(); ++j){
-            SharedPtr<OOP_Hw3::Function> secDeriveByj = firsDeriveByi->DeriveBy(*j);
+            SharedPtr<Function> secDeriveByj = firsDeriveByi->DeriveBy(*j);
             hessianMatrix[*i][*j] = secDeriveByj;
         }
     }

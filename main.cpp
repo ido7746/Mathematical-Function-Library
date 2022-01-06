@@ -16,7 +16,6 @@
 #include <iomanip> // Set floating point precision
 #include "MathematicalOperations.h"
 
-using namespace OOP_Hw3;
 using std::string;
 using std::map;
 typedef map<string, map<string, SharedPtr<Function> > > Hessian;
