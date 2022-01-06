@@ -9,7 +9,6 @@ Function object also support advanse mathematical methods:
 
  
 ## Example
-### Evaluete:
 ```
 SharedPtr<Function> f1 = new FunctionId("x"); // make id Function 
 SharedPtr<Function> derivef1 = f1->DeriveBy("x"); //Derive f1 By "x";
