@@ -1,4 +1,4 @@
-# Intro_to_sys_prg_cpp_assignment_Function
+# Mathematical Function Library
 A mathematical multi variable function library writen in cpp.
 With this library you can create Function object with standart mathematical syntax, you can also use mathematical operators like +, -, * and /.
 Function object also support advanse mathematical methods:
