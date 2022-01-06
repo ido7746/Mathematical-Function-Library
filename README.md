@@ -1,10 +1,17 @@
 # Intro_to_sys_prg_cpp_assignment_Function
-A mathematical function library writen in cpp.
-The library uses a Function object with standart mathematical operation
+A mathematical multi variable function library writen in cpp.
+With this library you can create Function object with standart mathematical syntax, you can also use mathematical operators like +, -, * and /.
+Function object also support advanse mathematical methods:
 
-A cpp project, in this project i made new object "function". that object can use (+,-,/,*) to make new function. and the methods: DeriveBy, Evaluate, Hessian.
+* Hessian - Calculates Hessian for a Function object.
+* Derive - Calculates the Function derivitive.
+* Evaluete - Calculate the Function value given mapping from each variable to a spesific value.
+
  
 ## Example
-1. 'g++ main.cpp'
-2. './main.exe'
+### Evaluete:
+```
+Function a = (x+y);
+
+```
 
