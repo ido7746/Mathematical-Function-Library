@@ -3,11 +3,10 @@
 #include "Function.h"
 #include <typeinfo>
 
-OOP_Hw3::FunctionSum::FunctionSum(SharedPtr<Function> left, SharedPtr<Function> rigth):leftFunction(left),rigthFunction(rigth)
-{
+OOP_Hw3::FunctionSum::FunctionSum(SharedPtr<Function> left, SharedPtr<Function> rigth):leftFunction(left),rigthFunction(rigth) {
     Function::MargeVatiable(rigth->Variables(), left->Variables());
 
-
+}
 double OOP_Hw3::FunctionSum::Evaluate(const std::map<std::string, double> &variables) const
 {
     double sumRigth=this->rigthFunction->Evaluate(variables);
