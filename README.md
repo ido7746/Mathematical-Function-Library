@@ -16,4 +16,10 @@ map<string, double> point;
 point["x"] = 5;
 f1->Evaluate(point); // f1(5)
 
+SharedPtr<Function> f2 = new FunctionId("y");
+SharedPtr<Function> f3 = f1 + f2; //f3(x,y) = x + y
+point["y"] = 2;
+f3->Evaluate(point); // f3(5,2) = 5 + 2
+f3->DeriveBy("x")->DeriveBy("y");
+
 ```
